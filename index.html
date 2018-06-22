@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snake</title>
+
+</head>
+<body style="margin: 0;
+			overflow: hidden;
+			background-color: white;
+			" onload="load()">
+	
+	<div id="blur"
+						style="	display: none;
+								position: absolute;
+								height: 110vh;
+								width: 110vw;
+								top: -5vh;
+								left: -5vw;
+								/*background-color: rgba(0,0,0,0.8);*/
+								filter: blur(5px);
+								z-index: 5;">
+	
+		<canvas 
+			style="display: block;
+					background-color: #ed1760;
+					/*box-sizing: border-box;
+					border: 10px grey solid;*/
+					position: relative; 
+					top: 50%; 
+					left: 50%;
+					margin: -300px 0 0 -600px;
+					box-shadow: 0px 20px 80px -15px #5f5f5f;"></canvas>
+
+	</div>
+	<div id="darken" style="display: none;
+							position: absolute;
+							height: 100vh;
+							width: 100vw;
+							background-color: rgba(0,0,0,0.8);
+							z-index: 9;"></div>
+	<div id="banner" 
+		style="display: none;
+				font: 150px arial;
+				text-align: center;
+				color: white;
+				height: 400px;
+				width: 600px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -200px 0 0 -300px;
+				z-index: 10;">SNAKE</div>
+	<div id="start" onclick="start()" style="position:absolute;
+											height: 100px;
+											width: 300px;
+											border-radius: 50px;
+											border: 5px solid green;
+											box-sizing: border-box;
+											top: 60%;
+											left: 50%;
+											margin-left: -150px;
+											/*background-color: green;*/
+											text-align: center;
+											font: bold 50px arial;
+											color: white;
+											line-height: 90px;
+											z-index: 10;
+											cursor: pointer;"	>PLAY</div>
+
+	<div id="finish" style="display: none;
+							font-size: 160px;
+							font-family: arial;
+							text-align: center;
+							position: absolute;
+							height: 100vh;
+							width: 100vw;
+
+							z-index: 11;
+							line-height: 70vh;
+							color: white;">GAME OVER<div onclick="retry()" style="position:absolute;
+											height: 100px;
+											width: 300px;
+											border-radius: 50px;
+											border: 5px solid green;
+											box-sizing: border-box;
+											top: 60%;
+											left: 50%;
+											margin-left: -150px;
+											/*background-color: green;*/
+											text-align: center;
+											font: bold 50px arial;
+											color: white;
+											line-height: 90px;
+											z-index: 10;
+											cursor: pointer;">RETRY</div></div>
+	<script type="text/javascript" src="snake.js"></script>
+</body>
+</html>
