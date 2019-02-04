@@ -75,7 +75,7 @@ function Food(){
 	this.draw = function(){
 		c.beginPath();
 		c.rect(this.x, this.y, scl, scl);
-		c.fillStyle = '#dc0054';
+		c.fillStyle = '#77dd77';
 		c.fill();
 		c.closePath();
 	}
